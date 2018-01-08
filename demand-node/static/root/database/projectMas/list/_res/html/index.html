@@ -1,0 +1,175 @@
+
+<section class="oneSec">
+    <!--表格内容-->
+    <div class="contentCenter">
+        <!--表格表头-->
+        <div class="centerTop">
+            <ul>
+                <li class="firstSp"><span></span></li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <span>知己知彼</span>
+                        <svg role="img" class="down">
+                            <use xlink:href="#down"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <span>需求市场</span>
+                        <svg role="img" class="down">
+                            <use xlink:href="#down"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <span>企业需求</span>
+                        <svg role="img" class="down">
+                            <use xlink:href="#down"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="lastSp">
+                    <a href="javascript:void(0)">
+                        <span>{{detailText}}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--列表-->
+        <div class="list"  >
+            <div class="list-table" style="display:{{lists._showDetail?'none':'block'}};" ng-hide="detailShow" >
+                <div class="list-top">
+                    <section class="flex1">
+                        <input type="checkbox" checked="checked" class="checked-none" data-style="checked" style="visibility: hidden">
+                        <label class="tick" style="visibility: hidden"></label>
+                    </section>
+                    <section class="flex4">企业名称</section>
+                    <section class="flex10">公司成立时间</section>
+                    <section class="flex8">公司类型</section>
+                    <section class="flex8">主要产品和服务</section>
+                    <section class="flex8">注册资金</section>
+                    <section class="flex8">地区</section>
+                </div>
+                <ul class="list-cenOul">
+                    <li class="list-style" ng-click="showDetail(lists)" ng-repeat="lists in projectLists" ng-dblclick = "jumpDetail(lists)">
+                        <section class="flex1">
+                            <input type="checkbox"  class="checked-none" data-style="checked">
+                            <label class="tiv {{lists._selectList?'tick':''}}" ></label>
+                        </section>
+                        <section class="flex4"  sho>{{lists.company}}</section>
+                        <section class="flex10" sho>{{lists.createCompanyTime}}</section>
+                        <section class="flex8"  sho>{{lists.companyType}}</section>
+                        <section class="flex8"  sho>{{lists.products}}</section>
+                        <section class="flex8"  sho>{{lists.money}}</section>
+                        <section class="flex8"  sho>{{lists.area}}</section>
+                    </li>
+                </ul>
+            </div>
+            <!--列表详情-->
+            <div class="list-detail" ng-show="detailShow" ng-dblclick = "return()">
+                <ul class="list-detail-oul">
+                    <li>
+                        <p>企业邮箱</p>
+                        <span>{{detailList.companyEmail}}</span>
+                    </li>
+                    <li>
+                        <p>企业网站</p>
+                        <span>{{detailList.website}}</span>
+                    </li>
+                    <li>
+                        <p>企业电话</p>
+                        <span>{{detailList.companyPhone}}</span>
+                    </li>
+                    <li>
+                        <p>联系人名字</p>
+                        <span>{{detailList.name}}</span>
+                    </li>
+                    <li>
+                        <p>联系人性别</p>
+                        <span>{{detailList.sex}}</span>
+                    </li>
+                    <li>
+                        <p>联系人职位</p>
+                        <span>{{detailList.position}}</span>
+                    </li>
+                    <li>
+                        <p>企业邮箱</p>
+                        <span>{{detailList.companyEmail}}</span>
+                    </li>
+                    <li>
+                        <p>企业网站</p>
+                        <span>{{detailList.website}}</span>
+                    </li>
+                    <li>
+                        <p>企业电话</p>
+                        <span>{{detailList.companyPhone}}</span>
+                    </li>
+                    <li>
+                        <p>联系人名字</p>
+                        <span>{{detailList.name}}</span>
+                    </li>
+                    <li>
+                        <p>联系人性别</p>
+                        <span>{{detailList.sex}}</span>
+                    </li>
+                    <li>
+                        <p>联系人职位</p>
+                        <span>{{detailList.position}}</span>
+                    </li>
+                    <li>
+                        <p>联系人电话</p>
+                        <span>{{detailList.phone}}</span>
+                    </li>
+                    <li>
+                        <p>联系人微信</p>
+                        <span>{{detailList.wechat}}</span>
+                    </li>
+                    <li>
+                        <p>业务类型</p>
+                        <span>{{detailList.businessType}}</span>
+                    </li>
+                    <li>
+                        <p>项目类型</p>
+                        <span>{{detailList.projectType}}</span>
+                    </li>
+                    <li>
+                        <p>项目说明</p>
+                        <span>{{detailList.description}}</span>
+                    </li>
+                    <li>
+                        <p>备注</p>
+                        <span>{{detailList.remark}}</span>
+                    </li>
+
+                </ul>
+                <!--<section class="list-detail-sec">-->
+                    <!--<p>资料完善</p>-->
+                    <!--<dl class="dlWid">-->
+                        <!--<dd class="ddWid"><span class="scaleDl">{{detailList.percent}}</span></dd>-->
+                    <!--</dl>-->
+                <!--</section>-->
+            </div>
+        </div>
+        <div class="footer">
+            <pagination count="custom.itemsCount" take="custom.take" activate="custom.activatePage"></pagination>
+        </div>
+    </div>
+
+</section>
+<!--删除-->
+<div class="delete" ng-show="delShow">
+    <div class="del-head">
+            <span  ng-click="cancel()">
+                <img src="/images/del.png">
+            </span>
+        <h3>温馨提示</h3>
+        <p>您确定要删除此数据吗？</p>
+    </div>
+    <div class="del-btn">
+        <button ng-click="cancel()">取消</button>
+        <button ng-click="delFn()">确定</button>
+    </div>
+</div>
+<div id="maskBg"  ng-show="delShow"></div>
