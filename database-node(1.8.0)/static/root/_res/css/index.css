@@ -216,12 +216,26 @@ a:hover {
 .nav .secTwo .secOulTwo li span {
     margin-left: 15px;
 }
+.nav .secTwo .secOulTwo li.active span {
+    color: #ffffff;
+}
+.nav .secTwo .secOulTwo li span {
+    color: #5e99c2;
+}
 
-.nav .secTwo .secOulTwo li svg {
+.nav .secTwo .secOulTwo li.active svg {
     width: 25%;
     height: 13px;
     margin-left: 15%;
     fill: #ffffff;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.nav .secTwo .secOulTwo li svg{
+    width: 25%;
+    height: 13px;
+    margin-left: 15%;
+    fill: #5e99c2;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }

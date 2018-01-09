@@ -37,6 +37,10 @@ app.controller('databaseCtrl', function ($scope,$state) {
  // 组织事件冒泡
     $scope.shop = function (event) {
         event.stopPropagation()
+    };
+
+    $scope.jumpPage = function () {
+       window.location.replace("https://demand.issp.bjike.com");
     }
 });
 

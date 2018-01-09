@@ -14,11 +14,6 @@ app.controller('ownerListCtrl',function($scope,ownerSer,toastr,$stateParams,$sta
         take: 10, //每页显示
         activatePage: activatePage
     };
-    // ownerSer.ownerList(data).then(function (response) {
-    //     if(response.data.code == 200){
-    //         $scope.custom.itemsCount = response.data.data.total;
-    //     }
-    // });
     function activatePage(page) {
         var data = {
             page:page||1
@@ -107,8 +102,8 @@ app.controller('ownerListCtrl',function($scope,ownerSer,toastr,$stateParams,$sta
                 $scope.uriArr = JSON.parse($scope.detailList.prove_url);
                 $scope.uriList = [];
                  for(var i =0;len=$scope.uriArr.length,i<len;i++){
-                       $scope.arrUrl  =$scope.uriArr[i].split('.')[1];
-                     $scope.uriList.push("http://192.168.0.93:8080"+$scope.uriArr[i])
+                     $scope.arrUrl  =$scope.uriArr[i].split('.')[1];
+                     $scope.uriList.push("https://wl.bjike.com"+$scope.uriArr[i])
                  }
                 $('.ddWid').width($scope.detailList.percent);
             }

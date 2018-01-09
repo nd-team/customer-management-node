@@ -46,8 +46,8 @@
                     <use xlink:href="#search"></use>
                 </svg>
             </li>
-            <li ng-click="haveAct = !haveAct" ng-class="{'active':!haveAct}" #dffdf>
-                <span>资料库</span>
+            <li ng-click="haveAct = !haveAct" ng-class="{'active':!haveAct}" >
+                <span>&nbsp;&nbsp;&nbsp;资料库</span>
                 <svg role="img" class="down">
                     <use xlink:href="#down"></use>
                 </svg>
@@ -72,6 +72,12 @@
                     <!--</li>-->
 
                 </ul>
+            </li>
+            <li ng-click="jumpPage()">
+                <span>需求市场</span>
+                <svg role="img" class="down">
+                    <use xlink:href="#down"></use>
+                </svg>
             </li>
         </ul>
     </div>
